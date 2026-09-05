@@ -158,10 +158,12 @@ import { destinations, festivals } from '~/data/destinations'
 // Rotating hero background — cycles through photos with a slow crossfade.
 // All images are stacked absolutely; only opacity changes, so this never
 // conflicts with layout, scroll-reveal, or any other animation on the page.
+// Self-hosted locally (public/images/) instead of hotlinked from external
+// sites, for faster, more reliable loading and full control over file size.
 const heroPhotos = [
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Bolinao_Falls%2C_Pangasinan.jpg/3840px-Bolinao_Falls%2C_Pangasinan.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Christ_the_Savior_at_Hundred_Island_National_Park.jpg/3840px-Christ_the_Savior_at_Hundred_Island_National_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail',
-  'https://outoftownblog.com/wp-content/uploads/2020/02/Our-Lady-of-Manaoag-Church-photo-by-Jsinglador-via-Wikipedia-CC.jpeg',
+  '/images/bolinao_falls.jpg',
+  '/images/hundred_island1.jpg',
+  '/images/Manaog.jpg',
 ]
 const activePhoto = ref(0)
 let rotateTimer: ReturnType<typeof setInterval> | undefined
